@@ -203,8 +203,10 @@ export default function FoodLink({ db, user, onLogout }) {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <header className="sticky top-0 z-10 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 border-b">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
-          <Utensils className="w-6 h-6" />
-          <h1 className="text-xl font-semibold">FoodShare</h1>
+          <div className="flex items-center gap-4 text-[#121a0f]">
+            <Utensils className="w-6 h-6" />
+            <h2 className="text-xl font-semibold">FoodShare</h2>
+          </div>
           <span className="ml-auto" />
           <button onClick={onLogout} type="button" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm text-slate-600 border border-slate-200 hover:bg-slate-100 transition">
             <LogOut className="w-4 h-4" />
@@ -536,7 +538,7 @@ function NewPostModal({ onClose, onCreate }) {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 20, opacity: 0 }}
-        className="bg-white w-full md:max-w-2xl rounded-2xl p-4 border shadow-lg"
+        className="bg-white w-full md:max-w-2xl rounded-2xl p-4 border shadow-lg max-h-[90vh] overflow-y-auto"
       >
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold">New Surplus Post</h3>
@@ -651,7 +653,7 @@ function Toast({ toast, onClose }) {
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 20, opacity: 0 }}
+          exit={{ opacity: 0, y: 20 }}
           className="fixed bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl shadow-lg border bg-white z-50"
         >
           <div className="text-sm">{toast.msg}</div>
