@@ -16,13 +16,12 @@ const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAQhOBzoQI2IyKOpD33BiIBeMqjPl8x3iQ",
-  authDomain: "foodshare-8aec9.firebaseapp.com",
-  projectId: "foodshare-8aec9",
-  storageBucket: "foodshare-8aec9.firebasestorage.app",
-  messagingSenderId: "735573330424",
-  appId: "1:735573330424:web:3bcd92c20bb60e415dee0d",
-  measurementId: "G-TPVPKSS838"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
 const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
